@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -31,8 +32,8 @@ module.exports = {
         test: /\.(s*)css$/,
         use: [
           { loader: MiniCssExtractPlugin.loader },
-          'css-loader',
-          'sass-loader',
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' },
         ],
       },
       {
